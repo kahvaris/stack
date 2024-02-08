@@ -1,0 +1,26 @@
+{
+  "name": "stack",
+  "version": "1.0.0",
+  "description": "full stack demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev" : "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kahvaris/stack.git"
+  },
+  "author": "Kerttu Varis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kahvaris/stack/issues"
+  },
+  "homepage": "https://github.com/kahvaris/stack#readme",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

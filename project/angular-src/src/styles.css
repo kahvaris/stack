@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    padding-top: 85px;
+}
+
+img {
+    max-height:inherit;
+    min-height:inherit;
+    width:min-content;
+    object-fit: cover;
+}
+
+.row {
+    margin-bottom: 25px;
+}
+
+.c-1 {
+    max-height: 200px;
+    min-height: 200px;
+}
+
+.c-2 {
+    max-height: 330px;
+    min-height: 330px;
+}

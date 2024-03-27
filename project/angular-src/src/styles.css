@@ -24,3 +24,37 @@ img {
     max-height: 330px;
     min-height: 330px;
 }
+
+
+
+.parent {
+    height:calc(100vh - 110px);
+    background-size: cover;
+    position: relative;
+
+    .forms {
+        background-color: white;
+        border-radius: 25px;
+        padding: 20px;
+        width: 30%;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .btn {
+            margin-top: 15px;
+        }
+    }
+}
+
+.f-1 {
+    background-image: url("assets/images/pexels-mrishmarinaalekseevna-6569295.jpg");
+}
+
+.f-2 {
+    background-image: url("assets/images/pexels-eberhard-grossgasteiger-2088170.jpg");
+    background-position: right 50% bottom 30%;
+}
+

@@ -58,3 +58,10 @@ img {
     background-position: right 50% bottom 30%;
 }
 
+.diary-page {
+    width:fit-content;
+}
+
+form .btn {
+    margin-top: 15px;
+}

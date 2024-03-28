@@ -7,8 +7,15 @@ import { tokenNotExpired } from 'angular2-jwt';
 export class AuthService {
   authToken: any;
   user: any;
+  entry: any;
 
   constructor(private http: HttpClient) { }
+
+  addDiaryEntry(entry) {
+    let headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    return this.http.post('http://localhost:3000/entries/add', entry, {headers: headers});
+  }
 
   registerUser(user){
     let headers = new HttpHeaders();

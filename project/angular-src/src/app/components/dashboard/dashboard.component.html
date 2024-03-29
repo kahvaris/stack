@@ -1,9 +1,11 @@
 <div class="mx-auto diary-page">
     <h2 class="page-header">Diary</h2>
     <p>Here is your main diary page. You can make diary entries by pressing "new entry" and start writing away!</p>
-    <button class="btn btn-secondary" (click)="onClick()">New entry</button>
+    
+    <button class="{{showAddEntry ? 'btn btn-secondary' : 'btn btn-primary'}}" 
+            (click)="onClick()" >{{showAddEntry ? 'Close form' : 'New entry'}}</button>
 
-    <form class="add-form" (ngSubmit)="onSubmit()">
+    <form *ngIf="showAddEntry" class="add-form" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="title">Title</label>
             <input class="form-control" type="text" name="title" [(ngModel)]="title" id="title" placeholder="Add title">
@@ -18,5 +20,11 @@
         </div>
         <input type="submit" value="Save entry" class="btn btn-lg btn-primary">
     </form>
+
+    <div *ngFor="let entry of entries" class="d-e">
+        <h4>{{entry.title}}</h4>
+        <h6>{{entry.date | date:'mediumDate'}}</h6>
+        <p>{{entry.entry}}</p>
+    </div>
 
 </div>

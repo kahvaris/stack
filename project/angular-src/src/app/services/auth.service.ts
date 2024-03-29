@@ -12,10 +12,23 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   addDiaryEntry(entry) {
-    let headers = new HttpHeaders();
-    headers.append('Content-Type', 'application/json');
+    this.loadToken();
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': this.authToken
+    });
     return this.http.post('http://localhost:3000/entries/add', entry, {headers: headers});
   }
+
+  getDiaryEntries() {
+    this.loadToken();
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': this.authToken
+    });
+    return this.http.get('http://localhost:3000/entries/all', {headers: headers});
+  }
+
 
   registerUser(user){
     let headers = new HttpHeaders();

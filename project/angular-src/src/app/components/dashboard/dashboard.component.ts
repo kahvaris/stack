@@ -4,6 +4,8 @@ import { FlashMessagesService } from 'angular2-flash-messages';
 import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 import { empty } from 'rxjs/Observer';
+import { UiService } from '../../services/ui.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,19 +16,28 @@ export class DashboardComponent implements OnInit {
   title: String;
   date: Date;
   entry: String;
+  showAddEntry: boolean = false;
+  subscription: Subscription;
+  entries: any[] = [];
 
   constructor(
     private validateService: ValidateService, 
     private flashMessage: FlashMessagesService, 
     private authService: AuthService,
-    private router: Router
-  ) { }
+    private router: Router,
+    private uiService: UiService
+  ) { 
+    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showAddEntry = value));
+  }
 
   ngOnInit() {
+    this.authService.getDiaryEntries().subscribe(data => {
+      this.entries = data['entries'];
+    });
   }
 
   onClick() {
-    console.log('Add');
+    this.uiService.toggleAddEntry();
   }
 
   onSubmit() {
@@ -47,7 +58,8 @@ export class DashboardComponent implements OnInit {
           if(data['success']) {
             this.flashMessage.show('Diary entry added successfully', {cssClass: 'alert-success', timeout: 3000});
             this.router.navigate(['/dashboard']);
-            console.log('Yes');
+            console.log('Entry added');
+            this.ngOnInit();
           } else {
             this.flashMessage.show('Failed to add diary entry', {cssClass: 'alert-danger', timeout: 3000});
             this.router.navigate(['/dashboard']);

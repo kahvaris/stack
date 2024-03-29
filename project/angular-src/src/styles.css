@@ -65,3 +65,18 @@ img {
 form .btn {
     margin-top: 15px;
 }
+
+
+.diary-page {
+    max-width: 50vw;
+    .btn {
+        margin-bottom: 15px;
+    }
+    .d-e {
+        border: 2px solid salmon;
+        margin-bottom: 15px;
+        border-radius: 25px;
+        padding: 15px;
+        overflow-wrap: break-word;
+    }
+}

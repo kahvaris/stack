@@ -33,6 +33,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.authService.getDiaryEntries().subscribe(data => {
       this.entries = data['entries'];
+      this.entries.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      console.log(this.entries)
     });
   }
 

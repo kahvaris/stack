@@ -1,8 +1,75 @@
 /* You can add global styles to this file, and also import other style files */
 
 body {
-    padding-top: 85px;
+    /* padding-top: 85px; */
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: aqua;
 }
+
+.container-home {
+    padding: 85px 30px 5px 30px;
+    background-color: white;
+}
+
+.container-login {
+    background-image: url("assets/images/pexels-eberhard-grossgasteiger-2088170.jpg");
+    background-position: right 50% bottom 30%;
+}
+
+.container-register {
+    background-image: url("assets/images/pexels-mrishmarinaalekseevna-6569295.jpg");
+}
+
+.parent {
+    height:calc(100vh - 55px);
+    margin-top: 55px;
+    background-size: cover;
+    position: relative;
+
+    .forms {
+        background-color: white;
+        border-radius: 25px;
+        padding: 20px;
+        width: 30%;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .btn {
+            margin-top: 15px;
+        }
+    }
+}
+
+
+.container-profile {
+    padding-top: 55px;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+.profile-page {
+    min-height: calc(100vh - 55px);
+    max-width: 45vw;
+    background-color: white;
+    padding: 20px;
+}
+
+.container-diary {
+    background-image: url("assets/images/pexels-mrishmarinaalekseevna-6569295.jpg");
+    background-size: cover;
+    padding-top: 55px;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+}
+
+
 
 img {
     max-height:inherit;
@@ -26,57 +93,35 @@ img {
 }
 
 
-
-.parent {
-    height:calc(100vh - 110px);
-    background-size: cover;
-    position: relative;
-
-    .forms {
-        background-color: white;
-        border-radius: 25px;
-        padding: 20px;
-        width: 30%;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        .btn {
-            margin-top: 15px;
-        }
-    }
-}
-
-.f-1 {
-    background-image: url("assets/images/pexels-mrishmarinaalekseevna-6569295.jpg");
-}
-
-.f-2 {
-    background-image: url("assets/images/pexels-eberhard-grossgasteiger-2088170.jpg");
-    background-position: right 50% bottom 30%;
-}
-
-.diary-page {
-    width:fit-content;
-}
-
 form .btn {
     margin-top: 15px;
 }
 
 
 .diary-page {
-    max-width: 50vw;
+    min-height: calc(100vh - 55px);
+    max-width: 45vw;
+    background-color: white;
+    padding: 20px;
+
     .btn {
         margin-bottom: 15px;
     }
     .d-e {
+        background-color: white;
         border: 2px solid salmon;
         margin-bottom: 15px;
-        border-radius: 25px;
+        border-radius: 20px;
         padding: 15px;
         overflow-wrap: break-word;
     }
+}
+
+
+.f-m {
+    position: fixed;
+    top: 0;
+    right: 10px;
+    margin-top: 65px;
+    z-index: 5;
 }

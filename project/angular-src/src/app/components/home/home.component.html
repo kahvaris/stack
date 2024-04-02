@@ -1,57 +1,61 @@
-<div class="row justify-content-center">
+<div class="container-home">
 
-  <div class="col c-1">
-    <img src="../../../assets/images/pexels-harper-sunday-2897035.jpg" class="img-fluid" alt="">
+  <div class="row justify-content-center">
+
+    <div class="col c-1">
+      <img src="../../../assets/images/pexels-harper-sunday-2897035.jpg" class="img-fluid" alt="">
+    </div>
+  
+    <div class="col c-1">
+      <img src="../../../assets/images/pexels-kate-trifo-4072140.jpg" class="img-fluid" alt="">
+    </div>
+  
+    <div class="col c-1">
+      <img src="../../../assets/images/pexels-nataliya-vaitkevich-6218454.jpg" class="img-fluid" alt="">
+    </div>
+  
   </div>
-
-  <div class="col c-1">
-    <img src="../../../assets/images/pexels-kate-trifo-4072140.jpg" class="img-fluid" alt="">
-  </div>
-
-  <div class="col c-1">
-    <img src="../../../assets/images/pexels-nataliya-vaitkevich-6218454.jpg" class="img-fluid" alt="">
-  </div>
-
-</div>
-
-
-<div class="row justify-content-center align-items-center">
-
-  <div class="col c-2">
-    <img src="../../../assets/images/pexels-anderson-rangel-12631352.jpg" class="img-fluid" alt="">
-  </div>
-
-  <div class="jumbotron text-center col col-6">
-    <h1>Digital Diary</h1>
-    <p class="lead">Welcome to the Digital Diary. Digital Diary provides you with a private space to record your thoughts, feelings, and memories along the way. Whether you're sharing daily events, contemplating future plans, or writing your own stories, Digital Diary gives you the freedom to express yourself. After registering, you can create your own profile and start writing your diary entries immediately. </p>
-    <div class="row justify-content-center">
-      <div class="col col-3" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="btn btn-primary" [routerLink]="['/register']">Sign up</a>
-      </div>
-      <div class="col col-3" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
-        <a class="btn btn-secondary" [routerLink]="['/login']">Log in</a>
+  
+  
+  <div class="row justify-content-center align-items-center">
+  
+    <div class="col c-2">
+      <img src="../../../assets/images/pexels-anderson-rangel-12631352.jpg" class="img-fluid" alt="">
+    </div>
+  
+    <div class="jumbotron text-center col col-6">
+      <h1>Digital Diary</h1>
+      <p class="lead">Welcome to the Digital Diary. Digital Diary provides you with a private space to record your thoughts, feelings, and memories along the way. Whether you're sharing daily events, contemplating future plans, or writing your own stories, Digital Diary gives you the freedom to express yourself. After registering, you can create your own profile and start writing your diary entries immediately. </p>
+      <div class="row justify-content-center">
+        <div class="col col-3" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a class="btn btn-primary" [routerLink]="['/register']">Sign up</a>
+        </div>
+        <div class="col col-3" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+          <a class="btn btn-secondary" [routerLink]="['/login']">Log in</a>
+        </div>
       </div>
     </div>
+  
+    <div class="col c-2">
+      <img src="../../../assets/images/pexels-boris-pavlikovsky-5499145.jpg" class="img-fluid" alt="">
+    </div>
+  
   </div>
-
-  <div class="col c-2">
-    <img src="../../../assets/images/pexels-boris-pavlikovsky-5499145.jpg" class="img-fluid" alt="">
-  </div>
-
-</div>
-
-<div class="row justify-content-center">
-
-  <div class="col c-1">
-    <img src="../../../assets/images/pexels-karolina-grabowska-4466240.jpg" class="img-fluid" alt="">
-  </div>
-
-  <div class="col c-1">
-    <img src="../../../assets/images/pexels-teona-swift-6913175.jpg" class="img-fluid" alt="">
-  </div>
-
-  <div class="col c-1">
-    <img src="../../../assets/images/pexels-irina-kaminskaya-12266030.jpg" class="img-fluid" alt="">
+  
+  <div class="row justify-content-center">
+  
+    <div class="col c-1">
+      <img src="../../../assets/images/pexels-karolina-grabowska-4466240.jpg" class="img-fluid" alt="">
+    </div>
+  
+    <div class="col c-1">
+      <img src="../../../assets/images/pexels-teona-swift-6913175.jpg" class="img-fluid" alt="">
+    </div>
+  
+    <div class="col c-1">
+      <img src="../../../assets/images/pexels-irina-kaminskaya-12266030.jpg" class="img-fluid" alt="">
+    </div>
+  
   </div>
 
 </div>

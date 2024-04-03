@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
   user: Object;
+  entries: any[] = [];
+  entriesCount: number;
 
   constructor(
     private authService: AuthService,
@@ -22,6 +24,11 @@ export class ProfileComponent implements OnInit {
     err => {
       console.log(err);
       return false;
+    });
+    this.authService.getDiaryEntries().subscribe(data => {
+      this.entries = data['entries'];
+      this.entriesCount = this.entries.length;
+      console.log(this.entriesCount);
     });
   }
 

@@ -18,19 +18,6 @@
         <li class="nav-item" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="nav-link" [routerLink]="['/register']">Sign up</a></li>
         <li class="nav-item" *ngIf="authService.loggedIn()"><a class="nav-link" (click)="onLogoutClick()" href="#">Logout</a></li>
       </ul>
-
-      <!-- <div class="nav-item dropdown"> nav navbar-nav navbar-left me-auto mb-2 mb-md-0 
-        <ul class="dropdown-menu">
-          <li class="dropdown-item" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" [routerLink]="['/']">Home</a></li>
-          <li class="dropdown-item" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" [routerLink]="['/dashboard']">Diary</a></li>
-          <li class="dropdown-item" *ngIf="authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" [routerLink]="['/profile']">Profile</a></li>
-  
-          <li class="dropdown-item" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" [routerLink]="['/login']">Log in</a></li>
-          <li class="dropdown-item" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}"><a class="dropdown-item" [routerLink]="['/register']">Sign up</a></li>
-          <li class="dropdown-item" *ngIf="authService.loggedIn()"><a class="dropdown-item" (click)="onLogoutClick()" href="#">Logout</a></li>
-        </ul>
-      </div> -->
-
     </div>
   </div>
 </nav>

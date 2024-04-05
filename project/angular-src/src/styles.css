@@ -71,7 +71,7 @@ body {
 @media screen and (min-width: 1355px) {
     .side-image {
         height: calc(100vh - 55px);
-        width: 30vw;
+        width: 35vw;
         background-repeat: no-repeat;
         background-size: contain;
         position: fixed;

@@ -15,7 +15,7 @@ import { Subscription } from 'rxjs';
 export class DashboardComponent implements OnInit {
   title: String;
   date: Date;
-  entry: String;
+  entry: Text;
   showAddEntry: boolean = false;
   subscription: Subscription;
   entries: any[] = [];
@@ -71,7 +71,7 @@ export class DashboardComponent implements OnInit {
     
     this.title = "";
     this.date = null;
-    this.entry = "";
+    this.entry = null;
 
   }
 

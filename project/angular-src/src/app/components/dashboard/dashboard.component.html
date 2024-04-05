@@ -3,7 +3,7 @@
     <div class="side-image si-right"></div>
     <div class="mx-auto diary-page">
         <h2 class="page-header">Diary</h2>
-        <p>Here is your main diary page. You can make diary entries by pressing "new entry" and start writing away!</p>
+        <p>The main diary page, made for you to share any thoughts freely.</p>
         
         <button class="{{showAddEntry ? 'btn btn-secondary' : 'btn btn-primary'}}" 
                 (click)="onClick()" >{{showAddEntry ? 'Close form' : 'New entry'}}</button>
@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label for="entry">Diary entry</label>
-                <input class="form-control" style="height:100px;" type="text" name="entry" [(ngModel)]="entry" id="entry" placeholder="Add entry">
+                <textarea class="form-control" type= "text" name="entry" id="entry" [(ngModel)]="entry" cols="20" rows="10" placeholder="Add entry"></textarea>
             </div>
             <input type="submit" value="Save entry" class="btn btn-lg btn-primary">
         </form>
